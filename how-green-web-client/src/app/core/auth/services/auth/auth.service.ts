@@ -12,16 +12,16 @@ const apiBaseUrl: string = environment.apiEndpoint;
   providedIn: 'root'
 })
 export class AuthService {
-public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-public userData: BehaviorSubject<IUser> = new BehaviorSubject<IUser>(null);
-public accessToken: BehaviorSubject<string> = new BehaviorSubject<string>(null);
+  public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public userData: BehaviorSubject<IUser> = new BehaviorSubject<IUser>(null);
+  public accessToken: BehaviorSubject<string> = new BehaviorSubject<string>(null);
 
-constructor(
-  private router: Router,
-  private httpClient: HttpClient,
-) {
-  this.refreshUserState();
-}
+  constructor(
+    private router: Router,
+    private httpClient: HttpClient,
+  ) {
+    this.refreshUserState();
+  }
 
   register(userCredentials: {}): void {
     this.httpClient

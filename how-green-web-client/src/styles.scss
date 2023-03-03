@@ -1,57 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/scss/functions";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
-// Default variable overrides
+// Variable overrides
 $primary: #32c36c;
 $secondary: #253745;
 
-:root {
-  --bs-secondary-rgb: $secondary;
-}
+@import 'node_modules/bootstrap/scss/bootstrap';
 
-@import "~bootstrap/scss/variables";
-
-$success:    $success;
-$info:       $info;
-$warning:    $warning;
-$danger:     $danger;
-$light:      $light;
-$dark:       $dark;
-
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-);
-
-@import "bootstrap/scss/utilities";
-
-$utilities: map-merge(
-  $utilities, (
-    "border": map-merge(
-      map-get($utilities, "width"),
-      ( responsive: true ),
-    ),
-  )
-);
-
-
-@import "~bootstrap/scss/bootstrap";
-
-// .text-green {
-//   color: #32c36c;
-// }
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
-
-
+// Class overrides
 .mask-readonly-input:read-only {
   background: white;
   border: none;
@@ -60,4 +15,9 @@ $utilities: map-merge(
 
 .text-shadow {
   text-shadow: 0.5px 0.5px 1px #777;
+}
+
+// Css variables overrides
+:root {
+  --bs-secondary-rgb: $secondary;
 }
